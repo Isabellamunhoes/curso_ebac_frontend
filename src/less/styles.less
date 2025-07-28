@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+    @bg: #222;
+    @primary: #00bcd4;
+    @accent: #ffeb3b;
+    @success: #4caf50;
+    @danger: #e91e63;
+
+    body {
+    background: @bg;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+    }
+
+    h1 {
+    color: @primary;
+    margin-bottom: 30px;
+    }
+
+    .sorteio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    }
+
+    #result {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-size: 5em;
+    font-weight: 700;
+    margin: 0;
+    color: @accent;
+    background: linear-gradient(90deg, @accent 60%, @primary 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 24px fade(@primary, 60%), 0 1px 0 #fff;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+    padding: 0.1em 0.3em;
+    display: inline-block;
+    transition: background 0.3s, color 0.3s;
+    }
+
+    button {
+    background: linear-gradient(90deg, @primary, @danger);
+    color: #fff;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.5em;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px #0006;
+    transition: background 0.2s;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 320px;
+    }
+    button:hover {
+    background: linear-gradient(90deg, @success, @accent);
+    color: @bg;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+    body {
+    padding: 10px;
+    }
+    #result {
+    font-size: 2.5em;
+    padding: 0.1em 0.1em;
+    }
+    button {
+    font-size: 1em;
+    padding: 12px 0;
+    max-width: 100%;
+    }
+    }
